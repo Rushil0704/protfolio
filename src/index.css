@@ -1,0 +1,643 @@
+/* Root Base Variables */
+:root {
+	/* Background Colors */
+	--color-bgc: #ffffff;
+	--color-bgc-dark: #1e293b;
+	--color-bgc-bgSelect: #1b3145;
+	--color-bgc-select: #0c4a5e;
+
+	/* Header Backgrounds */
+
+	/* Foreground Colors */
+	--color-fgc: #f3f6ff;
+	--color-fgc-dark: #18212f;
+
+	/* Text Colors */
+	--color-text: #111827;
+	--color-text-text: #696969;
+	--color-text-dark: #f9f8f8;
+	--color-text-textSecondary: #bbbbbb;
+	--color-text-primaryText: #e5ffff;
+	--color-text-placeholder: #999999;
+	--color-textSecondary: #111827;
+	--color-textSecondary-dark: #1ba5d0;
+	--color-muted-foreground: #78716c;
+	--color-logo-text: #c7feff;
+
+	/* Primary Theme Colors */
+	--color-primary: #137492;
+	--color-primary-dark: #137492;
+	--color-primary-tabbg: #dbe9f5;
+	--color-primary-side: #0c4a5e;
+	--color-primary-disabled: #85b6c5;
+	--color-primaryActive: #c7feff;
+	--color-primaryActive-dark: #c7feff;
+
+	/* Border & Disabled */
+	--color-border: #e6e9f4;
+	--color-border-dark: #2b3b54;
+	--color-disable: #d1d5db;
+	--color-disable-btn: #7dd3fc;
+	--color-disable-dark: #475569;
+
+	/* Header & Text Backgrounds */
+	--color-bgHeader: #2d3040;
+	--color-bgHeader-dark: #1e293b;
+	--color-bgText: #1b3145;
+
+	/* Icons */
+	--color-icon: #d7d6d6;
+	--color-icon-primary: #bebdbd;
+	--color-icon-icon: #dc1717;
+
+	/* Theme Palette */
+	--color-theme-1: #137492;
+	--color-theme-2: #db6565;
+	--color-theme-3: #2f4f4f;
+	--color-theme-4: #822f75;
+	--color-theme-5: #0f4d62;
+	--color-theme-6: #5e6673;
+	--color-theme-7: #bd4cab;
+	/* --color-theme-8: #10b981; */
+
+	/* ================== THEME PALETTE ================== */
+
+	/* Ocean Blue – calming and professional */
+	/* --color-theme-1: #0284c7; ocean blue */
+
+	/* Slate – neutral balance */
+	/* --color-theme-2: #475569; slate */
+
+	/* Purple – accent and creativity */
+	/* --color-theme-3: #7c3aed; vibrant purple */
+
+	/* Emerald – fresh and modern contrast */
+	/* --color-theme-4: #10b981; emerald */
+
+	/* Rose – soft, emotional highlight */
+	/* --color-theme-5: #f43f5e; rose */
+
+	/* Indigo – deep secondary accent */
+	/* --color-theme-6: #4338ca; indigo */
+
+	/* Status Colors */
+	--color-green: #16a34a;
+	--color-online: #16a34a;
+	--color-dnd: red;
+	--color-offline: #6b7280;
+	--color-away: yellow;
+}
+
+/* ===========================
+   Theme Variants
+   =========================== */
+
+.gradient-text {
+	background: linear-gradient(
+		90deg,
+		var(--color-primary),
+		var(--color-primaryActive)
+	);
+	background-size: 200% 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+	/* animation: gradient-move 3s ease-in-out infinite alternate; */
+}
+
+/* Theme 1 */
+.theme-1 {
+	--color-primary: #137492;
+	--color-bgc-select: #0c4a5e;
+	--color-textSecondary-dark: #1ba5d0;
+	--color-primary-tabbg: #13749215;
+	--color-bgc-bgSelect: #13749210;
+	--color-bgText: #1b3145;
+	--color-bgc-Header-light: #e3f2fd; /* lighter blue for header */
+	/* --color-logo-text: #c7feff; */
+	--color-bgc-Header: #e3f2fd; /* much lighter blue */
+	--color-primaryActive: #c7feff;
+	--color-muted-foreground: #78716c;
+	--color-foreground: #0c4a5e;
+	--color-background: #f9faff;
+	--color-accent: #c7feff;
+
+	/* --color-ring: #137492;
+	--color-destructive: #d4183d;
+	--color-secondary-foreground: #137492;
+	--color-secondary: #e3f2fd;
+	--color-muted: #ececf0;
+	--color-border: #e6e9f4; */
+}
+
+/* Theme 2 */
+.theme-2 {
+	--color-primary: #db6565;
+	--color-bgc-select: #851515;
+	--color-textSecondary-dark: #db6565;
+	--color-primary-tabbg: #db656510;
+	--color-bgc-bgSelect: #db656520;
+	--color-bgText: #4b1b1b;
+	--color-bgc-Header-light: #ffeaea; /* lighter pink for header */
+	/* --color-logo-text: #ffd6d6; */
+	--color-bgc-Header: #ffeaea; /* very light pink */
+	--color-primaryActive: #ffd6d6;
+	--color-muted-foreground: #78716c;
+	--color-foreground: #4a1b1b;
+	--color-background: #fffafa;
+	--color-accent: #ffd6d6;
+	/* --color-ring: #db6565;
+	--color-destructive: #d4183d;
+	--color-secondary-foreground: #db6565;
+	--color-secondary: #ffeaea;
+	--color-muted: #f8eaea;
+	--color-border: #f3d6d6; */
+}
+
+/* Theme 3 */
+.theme-3 {
+	--color-primary: #2f4f4f; /* base color */
+	--color-bgc-select: #1e3333; /* darker shade */
+	--color-textSecondary-dark: #2f4f4f; /* same as primary */
+	--color-primary-tabbg: #2f4f4f25; /* transparent tab background */
+	--color-bgc-bgSelect: #2f4f4f15; /* light bg select */
+	--color-bgText: #233333;
+	--color-bgc-Header-light: #e0f7fa; /* lighter teal for header */
+	/* --color-logo-text: #a3d5d5; */
+	--color-bgc-Header: #e0f7fa; /* pale teal */
+	--color-primaryActive: #a3d5d5;
+	--color-muted-foreground: #6c757d; /* blueish gray */
+	--color-foreground: #1e3333;
+	--color-background: #f9fafa;
+	--color-accent: #a3d5d5;
+	/* --color-ring: #2f4f4f;
+	--color-destructive: #d4183d;
+	--color-secondary-foreground: #2f4f4f;
+	--color-secondary: #e0f7fa;
+	--color-muted: #eaf6fa;
+	--color-border: #dbe9f5; */
+}
+
+/* Theme 4 */
+.theme-4 {
+	--color-primary: #822f75; /* base purple */
+	--color-bgc-select: #5a1f51; /* darker shade */
+	--color-textSecondary-dark: #822f75; /* same as primary */
+	--color-primary-tabbg: #822f7525; /* transparent tab background */
+	--color-bgc-bgSelect: #822f7515; /* light bg select */
+	--color-bgText: #3a1b3d;
+	--color-bgc-Header-light: #f3e6f7; /* lighter lavender for header */
+	/* --color-logo-text: #f5a3ff; */
+	--color-bgc-Header: #f3e6f7; /* light lavender */
+	--color-primaryActive: #f5a3ff;
+	--color-muted-foreground: #78716c; /* light gray */
+	--color-foreground: #5a1f51;
+	--color-background: #fff7ff;
+	--color-accent: #f5a3ff;
+	/* --color-ring: #822f75;
+	--color-destructive: #d4183d;
+	--color-secondary-foreground: #822f75;
+	--color-secondary: #f3e6f7;
+	--color-muted: #f7eaf6;
+	--color-border: #e6d6f3; */
+}
+
+/* Theme 5 */
+.theme-5 {
+	--color-primary: #0f4d62; /* base teal/navy */
+	--color-bgc-select: #093040; /* darker shade */
+	--color-textSecondary-dark: #0f4d62; /* same as primary */
+	--color-primary-tabbg: #0f4d6225; /* transparent tab background */
+	--color-bgc-bgSelect: #0f4d6215;
+	--color-bgText: #1b2a33;
+	--color-bgc-Header-light: #e0f2f1; /* lighter aqua for header */
+	/* --color-logo-text: #a3d5ff; */
+	--color-bgc-Header: #e0f2f1; /* light aqua */
+	--color-primaryActive: #a3d5ff;
+	--color-muted-foreground: #78716c; /* slate gray */
+	--color-foreground: #093040;
+	--color-background: #f9faff;
+	--color-accent: #a3d5ff;
+
+	/* --color-ring: #0f4d62;
+	--color-destructive: #d4183d;
+	--color-secondary-foreground: #0f4d62;
+	--color-secondary: #e0f2f1;
+	--color-muted: #eaf6fa;
+	--color-border: #dbe9f5; */
+}
+
+/* Theme 6 */
+.theme-6 {
+	--color-primary: #5e6673; /* base grayish tone */
+	--color-bgc-select: #3f454f; /* darker shade */
+	--color-textSecondary-dark: #5e6673; /* same as primary */
+	--color-primary-tabbg: #5e667325; /* transparent tab background */
+	--color-bgc-bgSelect: #5e667315; /* light bg select */
+	--color-bgText: #2a2e33;
+	--color-bgc-Header-light: #f0f4f8; /* lighter gray-blue for header */
+	/* --color-logo-text: #c7feff; */
+	--color-bgc-Header: #f0f4f8; /* very light gray-blue */
+	--color-primaryActive: #c7feff;
+	--color-muted-foreground: #78716c; /* medium gray */
+	--color-foreground: #3f454f;
+	--color-background: #f9faff;
+	--color-accent: #c7feff;
+	/* --color-ring: #5e6673;
+	--color-destructive: #d4183d;
+	--color-secondary-foreground: #5e6673;
+	--color-secondary: #f0f4f8;
+	--color-muted: #f3f6fa;
+	--color-border: #e6e9f4; */
+}
+
+/* Theme 7 */
+.theme-7 {
+	--color-primary: #bd4cab;
+	--color-bgc-select: #6d2861;
+	--color-textSecondary-dark: #bd4cab;
+	--color-primary-tabbg: #bd4cab15;
+	--color-bgc-bgSelect: #bd4cab10;
+	--color-bgText: #4a1b44;
+	--color-bgc-Header-light: #ffe6fa; /* lighter pinkish-lavender for header */
+	/* --color-logo-text: #ffc7ff; */
+	--color-bgc-Header: #ffe6fa; /* light pinkish-lavender */
+	--color-primaryActive: #ffc7ff;
+	/* --color-muted-foreground: #4b5563; */
+	--color-muted-foreground: #78716c;
+	--color-foreground: #6d2861;
+	--color-background: #fff5ff;
+	--color-accent: #ffc7ff;
+	/* --color-ring: #bd4cab;
+	--color-destructive: #d4183d;
+	--color-secondary-foreground: #bd4cab;
+	--color-secondary: #ffe6fa;
+	--color-muted: #fbeaf7;
+	--color-border: #f3d6f3; */
+}
+
+/* .theme-8 {
+	--color-primary: #10b981;
+	--color-bgc-select: #065f46;
+	--color-textSecondary-dark: #10b981;
+	--color-primary-tabbg: #10b98125;
+	--color-bgc-bgSelect: #10b98115;
+	--color-bgText: #064e3b;
+	--color-bgc-Header-light: #d1fae5;
+	--color-logo-text: #6ee7b7;
+	--color-bgc-Header: #d1fae5;
+	--color-primaryActive: #6ee7b7;
+	--color-muted-foreground: #555555;
+} */
+
+/* ===========================
+   Optional Variants (Light/Dark)
+   =========================== */
+
+/* Example Light Mode */
+.theme-1-light {
+	--color-primary: #4aa9c4;
+	--color-bgc-select: #d6f0f6;
+	--color-textSecondary-dark: #137492;
+	--color-primary-tabbg: #4aa9c415;
+	--color-bgc-bgSelect: #4aa9c420;
+}
+
+/* Example Dark Mode */
+.theme-1-dark {
+	--color-primary: #137492;
+	--color-bgc-select: #0a2e3a;
+	--color-textSecondary-dark: #5dd1e9;
+	--color-primary-tabbg: #13749230;
+	--color-bgc-bgSelect: #0f1f26;
+}
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+@keyframes gradient-move {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 300% 50%;
+	}
+}
+
+@keyframes colorFade {
+	0%,
+	100% {
+		color: var(--color-primary);
+	}
+	50% {
+		color: var(--color-primaryActive);
+	}
+}
+.color-fade {
+	animation: colorFade 2s infinite;
+}
+
+@keyframes wave {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(-5px);
+	}
+	40% {
+		transform: translateY(5px);
+	}
+	60% {
+		transform: translateY(-5px);
+	}
+	80% {
+		transform: translateY(5px);
+	}
+}
+.wave {
+	display: inline-block;
+	animation: wave 2s infinite;
+}
+
+@keyframes glow {
+	0%,
+	100% {
+		text-shadow: 0 0 10px var(--color-primary),
+			0 0 20px var(--color-primaryActive);
+	}
+	50% {
+		text-shadow: 0 0 20px var(--color-primaryActive),
+			0 0 40px var(--color-primary);
+	}
+}
+.glow {
+	animation: glow 1.5s infinite;
+}
+
+@keyframes throb {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.7;
+		transform: scale(1.08);
+	}
+}
+.throb {
+	animation: throb 1.5s infinite;
+}
+
+.container {
+	width: 100%;
+	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+	.container {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	.container {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+}
+
+.animate-marquee {
+	display: inline-flex;
+	min-width: max-content;
+	animation: marquee 30s linear infinite;
+}
+
+:root {
+	--font-size: 16px;
+	--background: #ffffff;
+	--foreground: oklch(0.145 0 0);
+	--card: #ffffff;
+	--card-foreground: oklch(0.145 0 0);
+	--popover: oklch(1 0 0);
+	--popover-foreground: oklch(0.145 0 0);
+	--primary: #030213;
+	--primary-foreground: oklch(1 0 0);
+	--secondary: oklch(0.95 0.0058 264.53);
+	--secondary-foreground: #030213;
+	--muted: #ececf0;
+	--muted-foreground: #717182;
+	--accent: #e9ebef;
+	--accent-foreground: #030213;
+	--destructive: #d4183d;
+	--destructive-foreground: #ffffff;
+	--border: rgba(0, 0, 0, 0.1);
+	--input: transparent;
+	--input-background: #f3f3f5;
+	--switch-background: #cbced4;
+	--font-weight-medium: 500;
+	--font-weight-normal: 400;
+	--ring: oklch(0.708 0 0);
+	--chart-1: oklch(0.646 0.222 41.116);
+	--chart-2: oklch(0.6 0.118 184.704);
+	--chart-3: oklch(0.398 0.07 227.392);
+	--chart-4: oklch(0.828 0.189 84.429);
+	--chart-5: oklch(0.769 0.188 70.08);
+	--radius: 0.625rem;
+	--sidebar: oklch(0.985 0 0);
+	--sidebar-foreground: oklch(0.145 0 0);
+	--sidebar-primary: #030213;
+	--sidebar-primary-foreground: oklch(0.985 0 0);
+	--sidebar-accent: oklch(0.97 0 0);
+	--sidebar-accent-foreground: oklch(0.205 0 0);
+	--sidebar-border: oklch(0.922 0 0);
+	--sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+	--background: oklch(0.145 0 0);
+	--foreground: oklch(0.985 0 0);
+	--card: oklch(0.145 0 0);
+	--card-foreground: oklch(0.985 0 0);
+	--popover: oklch(0.145 0 0);
+	--popover-foreground: oklch(0.985 0 0);
+	--primary: oklch(0.985 0 0);
+	--primary-foreground: oklch(0.205 0 0);
+	--secondary: oklch(0.269 0 0);
+	--secondary-foreground: oklch(0.985 0 0);
+	--muted: oklch(0.269 0 0);
+	--muted-foreground: oklch(0.708 0 0);
+	--accent: oklch(0.269 0 0);
+	--accent-foreground: oklch(0.985 0 0);
+	--destructive: oklch(0.396 0.141 25.723);
+	--destructive-foreground: oklch(0.637 0.237 25.331);
+	--border: oklch(0.269 0 0);
+	--input: oklch(0.269 0 0);
+	--ring: oklch(0.439 0 0);
+	--font-weight-medium: 500;
+	--font-weight-normal: 400;
+	--chart-1: oklch(0.488 0.243 264.376);
+	--chart-2: oklch(0.696 0.17 162.48);
+	--chart-3: oklch(0.769 0.188 70.08);
+	--chart-4: oklch(0.627 0.265 303.9);
+	--chart-5: oklch(0.645 0.246 16.439);
+	--sidebar: oklch(0.205 0 0);
+	--sidebar-foreground: oklch(0.985 0 0);
+	--sidebar-primary: oklch(0.488 0.243 264.376);
+	--sidebar-primary-foreground: oklch(0.985 0 0);
+	--sidebar-accent: oklch(0.269 0 0);
+	--sidebar-accent-foreground: oklch(0.985 0 0);
+	--sidebar-border: oklch(0.269 0 0);
+	--sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-input-background: var(--input-background);
+	--color-switch-background: var(--switch-background);
+	--color-ring: var(--ring);
+	--color-chart-1: var(--chart-1);
+	--color-chart-2: var(--chart-2);
+	--color-chart-3: var(--chart-3);
+	--color-chart-4: var(--chart-4);
+	--color-chart-5: var(--chart-5);
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+	:where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+		h1 {
+			font-size: var(--text-2xl);
+			font-weight: var(--font-weight-medium);
+			line-height: 1.5;
+		}
+
+		h2 {
+			font-size: var(--text-xl);
+			font-weight: var(--font-weight-medium);
+			line-height: 1.5;
+		}
+
+		h3 {
+			font-size: var(--text-lg);
+			font-weight: var(--font-weight-medium);
+			line-height: 1.5;
+		}
+
+		h4 {
+			font-size: var(--text-base);
+			font-weight: var(--font-weight-medium);
+			line-height: 1.5;
+		}
+
+		p {
+			font-size: var(--text-base);
+			font-weight: var(--font-weight-normal);
+			line-height: 1.5;
+		}
+
+		label {
+			font-size: var(--text-base);
+			font-weight: var(--font-weight-medium);
+			line-height: 1.5;
+		}
+
+		button {
+			font-size: var(--text-base);
+			font-weight: var(--font-weight-medium);
+			line-height: 1.5;
+		}
+
+		input {
+			font-size: var(--text-base);
+			font-weight: var(--font-weight-normal);
+			line-height: 1.5;
+		}
+	}
+}
+
+html {
+	font-size: var(--font-size);
+}
+
+/* Theme color variables for theme picker */
+.theme-1 {
+	--color-theme-1: #137492;
+}
+.theme-2 {
+	--color-theme-2: #db6565;
+}
+.theme-3 {
+	--color-theme-3: #2f4f4f;
+}
+.theme-4 {
+	--color-theme-4: #822f75;
+}
+.theme-5 {
+	--color-theme-5: #0f4d62;
+}
+.theme-6 {
+	--color-theme-6: #5e6673;
+}
+.theme-7 {
+	--color-theme-7: #bd4cab;
+}
+.theme-8 {
+	--color-theme-8: #10b981;
+}

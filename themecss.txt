@@ -1,0 +1,257 @@
+@import "tailwindcss";
+
+
+/* Root Base Variables */
+:root {
+	/* Background Colors */
+	--color-bgc: #ffffff;
+	--color-bgc-dark: #1e293b;
+	--color-bgc-bgSelect: #1b3145;
+	--color-bgc-select: #0c4a5e;
+
+	/* Foreground Colors */
+	--color-fgc: #f3f6ff;
+	--color-fgc-dark: #18212f;
+
+	/* Text Colors */
+	--color-text: #111827;
+	--color-text-text: #69696;
+	--color-text-dark: #f9f8f8;
+	--color-text-textSecondary: #bbbbbb;
+	--color-text-primaryText: #e5ffff;
+	--color-text-placeholder: #999999;
+	--color-textSecondary: #111827;
+	--color-textSecondary-dark: #1ba5d0;
+
+	/* Primary Theme Colors */
+	--color-primary: #137492;
+	--color-primary-dark: #137492;
+	--color-primary-tabbg: #dbe9f5;
+	--color-primary-side: #0c4a5e;
+	--color-primary-disabled: #85b6c5;
+	--color-primaryActive: #c7feff;
+	--color-primaryActive-dark: #c7feff;
+
+	/* Border & Disabled */
+	--color-border: #e6e9f4;
+	--color-border-dark: #2b3b54;
+	--color-disable: #d1d5db;
+	--color-disable-btn: #7dd3fc;
+	--color-disable-dark: #475569;
+
+	/* Header & Text Backgrounds */
+	--color-bgHeader: #2d3040;
+	--color-bgHeader-dark: #1e293b;
+	--color-bgText: #1b3145;
+
+	/* Icons */
+	--color-icon: #d7d6d6;
+	--color-icon-primary: #bebdbd;
+	--color-icon-icon: #dc1717;
+
+	/* Theme Palette */
+	--color-theme-1: #137492;
+	--color-theme-2: #db6565;
+	--color-theme-3: #2f4f4f;
+	--color-theme-4: #822f75;
+	--color-theme-5: #0f4d62;
+	--color-theme-6: #5e6673;
+	--color-theme-7: #bd4cab;
+
+	/* Status Colors */
+	--color-green: #16a34a;
+	--color-online: #16a34a;
+	--color-dnd: red;
+	--color-offline: #6b7280;
+	--color-away: yellow;
+}
+
+/* ===========================
+   Theme Variants
+   =========================== */
+
+/* Theme 1 */
+.theme-1 {
+	--color-primary: #137492;
+	--color-bgc-select: #0c4a5e;
+	--color-textSecondary-dark: #1ba5d0;
+	--color-primary-tabbg: #13749215;
+	--color-bgc-bgSelect: #13749210;
+}
+
+/* Theme 2 */
+.theme-2 {
+	--color-primary: #db6565;
+	--color-bgc-select: #851515;
+	--color-textSecondary-dark: #db6565;
+	--color-primary-tabbg: #db656510;
+	--color-bgc-bgSelect: #db656520;
+}
+
+/* Theme 3 */
+.theme-3 {
+	--color-primary: #2f4f4f; /* base color */
+	--color-bgc-select: #1e3333; /* darker shade */
+	--color-textSecondary-dark: #2f4f4f; /* same as primary */
+	--color-primary-tabbg: #2f4f4f25; /* transparent tab background */
+	--color-bgc-bgSelect: #2f4f4f15; /* light bg select */
+}
+
+/* Theme 4 */
+.theme-4 {
+	--color-primary: #822f75; /* base purple */
+	--color-bgc-select: #5a1f51; /* darker shade */
+	--color-textSecondary-dark: #822f75; /* same as primary */
+	--color-primary-tabbg: #822f7525; /* transparent tab background */
+	--color-bgc-bgSelect: #822f7515; /* light bg select */
+}
+
+/* Theme 5 */
+.theme-5 {
+	--color-primary: #0f4d62; /* base teal/navy */
+	--color-bgc-select: #093040; /* darker shade */
+	--color-textSecondary-dark: #0f4d62; /* same as primary */
+	--color-primary-tabbg: #0f4d6225; /* transparent tab background */
+	--color-bgc-bgSelect: #0f4d6215; /* light bg select */
+}
+
+/* Theme 6 */
+.theme-6 {
+	--color-primary: #5e6673; /* base grayish tone */
+	--color-bgc-select: #3f454f; /* darker shade */
+	--color-textSecondary-dark: #5e6673; /* same as primary */
+	--color-primary-tabbg: #5e667325; /* transparent tab background */
+	--color-bgc-bgSelect: #5e667315; /* light bg select */
+}
+
+/* Theme 7 */
+.theme-7 {
+	--color-primary: #bd4cab;
+	--color-bgc-select: #6d2861;
+	--color-textSecondary-dark: #bd4cab;
+	--color-primary-tabbg: #bd4cab15;
+	--color-bgc-bgSelect: #bd4cab10;
+}
+
+/* ===========================
+   Optional Variants (Light/Dark)
+   =========================== */
+
+/* Example Light Mode */
+.theme-1-light {
+	--color-primary: #4aa9c4;
+	--color-bgc-select: #d6f0f6;
+	--color-textSecondary-dark: #137492;
+	--color-primary-tabbg: #4aa9c415;
+	--color-bgc-bgSelect: #4aa9c420;
+}
+
+/* Example Dark Mode */
+.theme-1-dark {
+	--color-primary: #137492;
+	--color-bgc-select: #0a2e3a;
+	--color-textSecondary-dark: #5dd1e9;
+	--color-primary-tabbg: #13749230;
+	--color-bgc-bgSelect: #0f1f26;
+}
+
+App.jsx
+import React, { useState, useEffect } from "react";
+import Navbar from "./Navbar";
+import Home from "./Home";
+// import About from "./About";
+// import Skills from "./Skills";
+// import Projects from "./Projects";
+// import Contact from "./Contact";
+import { FiSettings } from "react-icons/fi";
+
+const themes = [
+	"theme-1",
+	"theme-2",
+	"theme-3",
+	"theme-4",
+	"theme-5",
+	"theme-6",
+	"theme-7",
+];
+
+const App = () => {
+	const [theme, setTheme] = useState("theme-1");
+	const [open, setOpen] = useState(false);
+
+	useEffect(() => {
+		themes.forEach((t) => document.documentElement.classList.remove(t));
+		document.documentElement.classList.add(theme);
+		localStorage.setItem("theme", theme);
+	}, [theme]);
+
+	useEffect(() => {
+		const savedTheme = localStorage.getItem("theme");
+		if (savedTheme) setTheme(savedTheme);
+	}, []);
+
+	return (
+		<div>
+			<Navbar />
+
+			<main className="">
+				<section id="home">
+					<Home />
+				</section>
+				<section
+					id="about"
+					className="min-h-screen flex items-center justify-center text-white"
+				>
+					About Section
+				</section>
+				<section
+					id="skills"
+					className="min-h-screen flex items-center justify-center text-white"
+				>
+					Skills Section
+				</section>
+				<section
+					id="projects"
+					className="min-h-screen flex items-center justify-center text-white"
+				>
+					Projects Section
+				</section>
+				<section
+					id="contact"
+					className="min-h-screen flex items-center justify-center text-white"
+				>
+					Contact Section
+				</section>
+			</main>
+
+			{/* Theme Picker Icon */}
+			<div className="fixed bottom-5 right-5 flex flex-col items-end gap-2 z-50">
+				<button
+					className="p-3 rounded-full bg-[color:var(--color-primary)] text-white shadow-lg hover:scale-110 transition"
+					onClick={() => setOpen(!open)}
+				>
+					<FiSettings size={24} />
+				</button>
+				{open && (
+					<div className="flex flex-row gap-2 mt-2 bg-black/70 p-3 rounded-lg shadow-lg">
+						{themes.map((t, i) => (
+							<button
+								key={i}
+								className={`w-8 h-8 rounded-full border-2 border-white shadow-lg`}
+								style={{
+									backgroundColor: `var(--color-theme-${
+										i + 1
+									})`,
+								}}
+								onClick={() => setTheme(t)}
+							/>
+						))}
+					</div>
+				)}
+			</div>
+		</div>
+	);
+};
+
+export default App;
+
