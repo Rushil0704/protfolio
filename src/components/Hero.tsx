@@ -214,7 +214,7 @@ export function Hero() {
 						/>
 
 						{/* Bottom-left zap icon */}
-						<div className="absolute bottom-0 left-0 sm:size-16 size-12 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] hover:from-[var(--color-primary)]/90 hover:to-[var(--color-accent)]/90 rounded-lg flex items-center justify-center shadow-lg shadow-[var(--color-accent)]/25 transition-all hover:shadow-xl hover:shadow-[var(--color-accent)]/35 duration-700 ease-out scale-100 z-10 translate-x-0 sm:-translate-x-1/2 translate-y-1/2">
+						<div className="absolute sm:bottom-8 sm:left-8 sm:size-16 size-12 bottom-6 left-0 bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-accent)] hover:from-[var(--color-primary)]/90 hover:to-[var(--color-accent)]/90 rounded-lg flex items-center justify-center shadow-lg shadow-[var(--color-accent)]/25 transition-all hover:shadow-xl hover:shadow-[var(--color-accent)]/35 duration-700 ease-out scale-100 z-10 translate-x-0 sm:-translate-x-1/2 translate-y-1/2">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
