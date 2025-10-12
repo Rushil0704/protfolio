@@ -146,6 +146,14 @@ export function Hero() {
 								color: "var(--color-primary-foreground)",
 								boxShadow: "0 4px 24px 0 var(--color-primary)",
 							}}
+							onClick={() => {
+								const el = document.getElementById("projects");
+								if (el)
+									el.scrollIntoView({
+										behavior: "smooth",
+										block: "start",
+									});
+							}}
 						>
 							<span className="relative z-10">View My Work</span>
 							<svg
