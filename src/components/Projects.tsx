@@ -499,7 +499,7 @@ export function Projects() {
 							</div>
 							<div className="flex flex-col sm:flex-row gap-4">
 								<a
-									href="https://khush-portfolio.vercel.app"
+									href="https://rushilvagadiya.netlify.app/"
 									target="_blank"
 									rel="noopener noreferrer"
 									data-slot="button"
